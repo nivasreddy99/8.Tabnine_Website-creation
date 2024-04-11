@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Online Booking</title>
+    <style>
+        body {
+            background-image: url('restaurant-image.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .login-form {
+            margin: 50px auto;
+            width: 300px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Our Restaurant</h1>
+    </div>
+
+    <div class="login-form">
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2022 Our Restaurant. All rights reserved.</p>
+    </div>
+
+    <script>
+        const loginForm = document.querySelector('.login-form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = loginForm.querySelector('input[type="text"]').value;
+            const password = loginForm.querySelector('input[type="password"]').value;
+
+            if (username === 'admin' && password === 'password') {
+                alert('Login successful!');
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+</body>
+</html>
